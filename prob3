@@ -1,0 +1,35 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+ 
+int main()
+{
+	int a,b,c;
+	string temp;
+	cout << "Enter the size of array: ";
+	cin >> a;
+	string l[a];
+	cout << "Enter the array elements: \n"; 
+	
+	for(b=0; b < a;++b)
+		cin >> l[b];
+		
+	for(b=1; b < a;++b)
+	{
+		for(c=0; c < a - b;++c)
+			if(l[c]>l[c+1])
+			{
+				temp=l[c];
+				l[c]=l[c+1];
+				l[c+1]=temp;
+			}
+	}
+	
+	cout << "After Sorting... ";
+	for(b=0; b < a; ++b)
+	{
+	cout << l[b] << ", ";
+}
+	_getch();
+	return 0;
+}
