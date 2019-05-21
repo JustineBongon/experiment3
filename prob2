@@ -1,0 +1,46 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+{
+	char p[3][20]= {"Province A, Day ", "Province B, Day ", "Province C, Day "};
+	int pa[7], pb[7], pc[7];
+	int a, b, c;
+	
+	cout << "Enter all temperature for a week of Province A, Province B, and then Province C.\n";
+	
+	for (a=0;a<3;a++)
+	{
+		for (b=0;b<7;b++)
+		{
+			cout << p[a];	
+			cout << (b+1) << ": ";
+			if (a==0)
+				cin >> pa[b];
+			else if (a==1)
+				cin >> pb[b];
+			else
+				cin >> pc[b];
+		}
+	}
+	
+	cout << "\n\n\nDisplaying Values:\n";
+
+	for (a=0;a<3;a++)
+	{
+		for (b=0;b<7;b++)
+		{
+			cout << p[a];	
+			cout << (b+1) << "= ";
+			if (a==0)
+				cout << pa[b] << '\n';
+			else if (a==1)
+				cout << pb[b] << '\n';
+			else
+				cout << pc[b] << '\n';
+		}
+	}
+	return 0;
+}
