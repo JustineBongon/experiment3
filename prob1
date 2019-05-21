@@ -1,0 +1,40 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+	{
+		double set[10],ave,sum=0;
+		int a, b, c;
+		int input; 
+		
+		cout << "Enter 10 real numbers: \n";
+		
+		for (a=0;a<10;a++)
+		{
+			cin >> set[a];
+			sum = sum + set[a];
+		}
+		
+		for (a=0;a<10;a++)
+		{
+			for (b=a+1;b<10;b++)
+			{
+				if (set[a]>set[b])
+				{
+					c = set[a];
+					set[a] = set[b];
+					set[b] = c;
+				}
+			}
+		}
+		ave = sum / 10;
+		cout << "Smallest Number = " << set[0] << endl;
+		cout << "Largest Number = " << set[9] << endl;
+		cout << "Sum = " << sum << endl;
+		cout << "Average = " << ave << endl;
+		
+		_getch();
+		return 0;
+	}
